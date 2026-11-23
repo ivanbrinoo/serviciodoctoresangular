@@ -19,4 +19,10 @@ export class DoctoresComponent implements OnInit{
     this.arraydoctores = await this._service.getDoctoresAsync();
     this._cdr.detectChanges()
   }
+
+  async eliminarDoctores(id: number): Promise<void> {
+    await this._service.eliminarDoctorAsync(id)
+    this.arraydoctores = await this._service.getDoctoresAsync();
+    this._cdr.detectChanges()
+  }
 }

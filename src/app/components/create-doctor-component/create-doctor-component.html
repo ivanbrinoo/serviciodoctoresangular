@@ -1,0 +1,36 @@
+<div>
+  <h2>Insertar Doctor</h2>
+
+  <form #formulario="ngForm" (ngSubmit)="insertarDoctor()">
+    <div class="mb-3">
+      <label class="form-label">ID Doctor:</label>
+      <input type="number" name="idDoctor" ngModel #cajaiddoctor class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Apellido:</label>
+      <input type="text" name="apellido" ngModel #cajaapellido class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Especialidad:</label>
+      <input type="text" name="especialidad" ngModel #cajaespecialidad class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Salario:</label>
+      <input type="number" name="salario" ngModel #cajasalario class="form-control" required />
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">ID Hospital:</label>
+      <input type="number" name="idHospital" ngModel #cajaidhospital class="form-control" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+      Crear Doctor
+    </button>
+  </form>
+
+  <h3 class="text-success mt-3">{{ mensaje }}</h3>
+</div>

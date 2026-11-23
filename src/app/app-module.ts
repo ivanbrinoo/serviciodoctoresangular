@@ -8,9 +8,10 @@ import { ServiceDoctores } from './services/service.doctores';
 import { FormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { DoctoresComponent } from './components/doctores-component/doctores-component';
+import { CreateDoctorComponent } from './components/create-doctor-component/create-doctor-component';
 
 @NgModule({
-  declarations: [App, HomeComponent, MenuComponent, DoctoresComponent],
+  declarations: [App, HomeComponent, MenuComponent, DoctoresComponent, CreateDoctorComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners(), ServiceDoctores, provideHttpClient()],
   bootstrap: [App],
