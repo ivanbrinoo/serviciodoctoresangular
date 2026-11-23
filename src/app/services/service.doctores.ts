@@ -35,4 +35,12 @@ export class ServiceDoctores {
             this._http.delete<void>(url)
         )
     }
+
+    async modificarDoctorAsync(iddoctor: number, idhospital: number): Promise<any> {
+    let request = "api/doctores/updatedoctorhospital/" + iddoctor + "/" + idhospital;
+    let url = environment.apiejemplos + request;
+
+    return await firstValueFrom(this._http.put(url, {}));
+    }
+
 }
